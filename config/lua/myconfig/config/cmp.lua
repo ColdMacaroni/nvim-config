@@ -11,6 +11,7 @@ local has_words_before = function()
 end
 -- }}}
 
+---@diagnostic disable-next-line: missing-fields
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -64,11 +65,13 @@ cmp.setup {
   }, {
     { name = "buffer" },
   }),
+  ---@diagnostic disable-next-line: missing-fields
   view = {
     -- Flip order when cursor is low.
     entries = { name = "custom", selection_order = "near_cursor" },
   },
   -- Pretty symbols
+  ---@diagnostic disable-next-line: missing-fields
   formatting = {
     format = lspkind.cmp_format {
       mode = "symbol_text",

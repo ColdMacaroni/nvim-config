@@ -9,6 +9,7 @@ return require("packer").startup(function(use)
     run = ":TSUpdate",
     config = function()
       -- Tiny setup, so it stays here.
+      ---@diagnostic disable-next-line: missing-fields
       require("nvim-treesitter.configs").setup {
         ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
         auto_install = true,
@@ -50,6 +51,7 @@ return require("packer").startup(function(use)
   use {
     "folke/tokyonight.nvim",
     config = function()
+      ---@diagnostic disable-next-line: missing-fields
       require("tokyonight").setup {
         transparent = vim.g.transparent_enabled or false,
       }
