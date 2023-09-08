@@ -17,9 +17,7 @@ local servers = {
 -- {{{ Mason
 -- Ensure these are setup before doing other stuff
 require("mason").setup()
-require("mason-lspconfig").setup {
-  ensure_installed = servers,
-}
+require("mason-lspconfig").setup {}
 --- }}}
 
 -- Get neat stuff for nvim config
