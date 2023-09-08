@@ -1,9 +1,22 @@
                   Cool plugins that I may or may not add later
            ---------------------------------------------------------
-Highlight selections with colours:
-- https://github.com/Pocco81/high-str.nvim
+- Lsp lines my beloved
+  https://git.sr.ht/~whynothugo/lsp_lines.nvim
 
-Neat wild menu
+- .gitignore templates
+  https://github.com/wintermute-cell/gitignore.nvim
+
+- org-mode-like files and management of them. Looks cool and likely nicer than markdown
+  https://github.com/nvim-neorg/neorg
+
+- Visually see marks and more management options
+  https://github.com/chentoast/marks.nvim
+
+- Colour utils and such. Quite nice
+https://github.com/nvim-colortils/colortils.nvim
+
+- Neat wild menu
+  {{{ sample config
   {
     "gelguy/wilder.nvim",
     config = function()
@@ -22,3 +35,10 @@ Neat wild menu
     end,
     keys = { ":", "/", "?" },
   },
+  }}}
+
+- Generate code screenshots quickly
+  https://github.com/krivahtoo/silicon.nvim
+
+- Highlight selections with colours
+  https://github.com/Pocco81/high-str.nvim
