@@ -11,6 +11,7 @@ local servers = {
   "rust_analyzer",
   "marksman",
   "bashls",
+  "elixirls",
 }
 
 -- {{{ Mason
