@@ -58,6 +58,10 @@ local languages = {
     getlint "flake8",
     getfmt "autopep8",
   },
+  elixir = {
+    require "myconfig.config.lsp.credo",
+    require "myconfig.config.lsp.mixformat",
+  },
 }
 
 return caps {
