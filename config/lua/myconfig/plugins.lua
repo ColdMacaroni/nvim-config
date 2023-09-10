@@ -47,17 +47,6 @@ return require("packer").startup(function(use)
     end,
   }
   -- }}}
-  -- {{{ Tokyonight
-  use {
-    "folke/tokyonight.nvim",
-    config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      require("tokyonight").setup {
-        transparent = vim.g.transparent_enabled or false,
-      }
-    end,
-  }
-  -- }}}
   -- {{{ Catppuccin
   use {
     "catppuccin/nvim",
