@@ -353,6 +353,22 @@ return require("packer").startup(function(use)
     end,
   }
 
+  use {
+    "andymass/vim-matchup",
+    requires = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      -- Enable treesitter support
+      ---@diagnostic disable-next-line: missing-fields
+      require("nvim-treesitter.configs").setup {
+        matchup = {
+          enable = true,
+        },
+      }
+      -- Show the matching line
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
+  }
+
   use "preservim/vim-markdown"
   use "AndrewRadev/bufferize.vim"
   use "chrisbra/csv.vim"
