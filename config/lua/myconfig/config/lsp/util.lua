@@ -18,7 +18,7 @@ function M.default_attach()
     client.server_capabilities.documentRangeFormattingProvider = false
 
     -- TODO: Check why it's not doing anything
-    if client.resolved_capabilities.document_highlight then
+    if client.resolved_capabilities and client.resolved_capabilities.document_highlight then
       vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
         group = "lsp_document_highlight",
         buffer = 0,
