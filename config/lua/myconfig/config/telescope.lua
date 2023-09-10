@@ -10,6 +10,7 @@ telescope.setup {
         { "~/projects", max_depth = 4 },
       },
       order_by = "recent",
+      sync_with_nvim_tree = true,
     },
   },
 }
