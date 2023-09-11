@@ -358,6 +358,14 @@ return require("packer").startup(function(use)
     end,
   }
 
+  use {
+    "ggandor/leap.nvim",
+    requires = { "tpope/vim-repeat" },
+    config = function()
+      require("leap").add_default_mappings()
+    end,
+  }
+
   use "elixir-editors/vim-elixir"
   use "preservim/vim-markdown"
   use "AndrewRadev/bufferize.vim"
@@ -367,7 +375,11 @@ return require("packer").startup(function(use)
   use "mfussenegger/nvim-jdtls"
   use "eandrju/cellular-automaton.nvim"
   use "nvim-tree/nvim-web-devicons"
-  use "tpope/vim-surround"
+  use {
+    "tpope/vim-surround",
+    -- Makes . repeats work
+    requires = { "tpope/vim-repeat" },
+  }
   use "tpope/vim-fugitive"
 
   -- {{{ Commented out
