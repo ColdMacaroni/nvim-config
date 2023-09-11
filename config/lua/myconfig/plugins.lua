@@ -358,6 +358,7 @@ return require("packer").startup(function(use)
     end,
   }
 
+  use "elixir-editors/vim-elixir"
   use "preservim/vim-markdown"
   use "AndrewRadev/bufferize.vim"
   use "chrisbra/csv.vim"
