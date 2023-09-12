@@ -3,6 +3,9 @@
 - Lsp lines my beloved
   https://git.sr.ht/~whynothugo/lsp_lines.nvim
 
+- Edit filesystem in a buffer
+  https://github.com/stevearc/oil.nvim
+
 - .gitignore templates
   https://github.com/wintermute-cell/gitignore.nvim
 
