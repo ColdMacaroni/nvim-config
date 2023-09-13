@@ -46,6 +46,15 @@ local config = {
       },
     },
   },
+  init_options = {
+    bundles = {
+      -- Debugger installed via packer
+      vim.fn.globpath(
+        vim.fn.stdpath "data" .. "/site/pack/packer/opt/java-debug",
+        "**/com.microsoft.java.debug.plugin-*.jar"
+      ),
+    },
+  },
 }
 
 require("jdtls").start_or_attach(config)

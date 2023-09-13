@@ -359,6 +359,12 @@ return require("packer").startup(function(use)
         matchup = {
           enable = true,
         },
+        highlight = {
+          enable = true,
+          -- Required for spellcheck, some LaTex highlights and
+          -- code block highlights that do not have ts grammar
+          additional_vim_regex_highlighting = { "org" },
+        },
       }
       -- Show the matching line
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
@@ -383,6 +389,15 @@ return require("packer").startup(function(use)
     "tpope/vim-surround",
     -- Makes . repeats work
     requires = { "tpope/vim-repeat" },
+  }
+
+  use {
+    "nvim-orgmode/orgmode",
+    config = function()
+      require("orgmode").setup_ts_grammar()
+      require("orgmode").setup {}
+    end,
+    requires = { "nvim-treesitter/nvim-treesitter" },
   }
   use "elixir-editors/vim-elixir"
   use "preservim/vim-markdown"
