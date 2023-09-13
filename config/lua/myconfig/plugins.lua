@@ -283,17 +283,24 @@ return require("packer").startup(function(use)
     config = function()
       require "myconfig.config.dap"
     end,
-  }
-
-  use {
-    "mxsdev/nvim-dap-vscode-js",
     requires = {
-      { "mfussenegger/nvim-dap" },
+      -- {{{ Javascript debugging
       {
-        "microsoft/vscode-js-debug",
-        opt = true,
-        run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv -f dist out",
+        "mxsdev/nvim-dap-vscode-js",
+        requires = {
+          "microsoft/vscode-js-debug",
+          opt = true,
+          run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv -f dist out",
+        },
       },
+      -- }}}
+      -- {{{ Java debugging
+      {
+        "microsoft/java-debug",
+        run = "./mvnw clean install",
+        opt = true,
+      },
+      -- }}}
     },
   }
 
@@ -366,20 +373,25 @@ return require("packer").startup(function(use)
     end,
   }
 
+  use {
+    "mfussenegger/nvim-jdtls",
+    -- Load after dap to ensure it's registered
+    after = "nvim-dap",
+  }
+
+  use {
+    "tpope/vim-surround",
+    -- Makes . repeats work
+    requires = { "tpope/vim-repeat" },
+  }
   use "elixir-editors/vim-elixir"
   use "preservim/vim-markdown"
   use "AndrewRadev/bufferize.vim"
   use "chrisbra/csv.vim"
   use "dpezto/gnuplot.vim"
   use "sophacles/vim-processing"
-  use "mfussenegger/nvim-jdtls"
   use "eandrju/cellular-automaton.nvim"
   use "nvim-tree/nvim-web-devicons"
-  use {
-    "tpope/vim-surround",
-    -- Makes . repeats work
-    requires = { "tpope/vim-repeat" },
-  }
   use "tpope/vim-fugitive"
 
   -- {{{ Commented out
