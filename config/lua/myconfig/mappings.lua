@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 
 -- {{{ Non WhichKey
 -- Disable highlighting
-vim.keymap.set("n", "<Esc>", "<Esc>:noh<cr>", { silent = true })
+vim.keymap.set("n", "<Esc>", vim.cmd.nohlsearch, { silent = true })
 -- }}}
 
 -- NOTE: Harpoon is broken, binds commented out
