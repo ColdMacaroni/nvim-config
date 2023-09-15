@@ -1,3 +1,4 @@
+require "myconfig.earlyfixes"
 require "myconfig.options"
 require "myconfig.plugins"
 require "myconfig.mappings"
