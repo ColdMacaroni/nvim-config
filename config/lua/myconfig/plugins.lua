@@ -399,6 +399,15 @@ return require("packer").startup(function(use)
     end,
     requires = { "nvim-treesitter/nvim-treesitter" },
   }
+
+  use {
+    "akinsho/org-bullets.nvim",
+    config = function()
+      require("org-bullets").setup()
+    end,
+    requires = { "nvim-orgmode/orgmode" },
+  }
+
   use "elixir-editors/vim-elixir"
   use "preservim/vim-markdown"
   use "AndrewRadev/bufferize.vim"
