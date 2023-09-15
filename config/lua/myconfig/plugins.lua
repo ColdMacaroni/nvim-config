@@ -403,9 +403,23 @@ return require("packer").startup(function(use)
   use {
     "akinsho/org-bullets.nvim",
     config = function()
-      require("org-bullets").setup()
+      ---@diagnostic disable-next-line: missing-fields
+      require("org-bullets").setup {}
     end,
     requires = { "nvim-orgmode/orgmode" },
+  }
+
+  use {
+    "turbio/bracey.vim",
+    run = "npm install --prefix server",
+  }
+
+  use {
+    "max397574/colortils.nvim",
+    cmd = "Colortils",
+    config = function()
+      require("colortils").setup {}
+    end,
   }
 
   use "elixir-editors/vim-elixir"
