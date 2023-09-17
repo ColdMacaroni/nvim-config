@@ -12,6 +12,7 @@ local servers = {
   "marksman",
   "bashls",
   "elixirls",
+  "html",
 }
 
 -- {{{ Mason
