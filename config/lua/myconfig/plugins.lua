@@ -8,13 +8,7 @@ return require("packer").startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
     config = function()
-      -- Tiny setup, so it stays here.
-      ---@diagnostic disable-next-line: missing-fields
-      require("nvim-treesitter.configs").setup {
-        ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-        auto_install = true,
-        highlight = { enable = true },
-      }
+      require "myconfig.config.treesitter"
     end,
   }
   -- }}}
