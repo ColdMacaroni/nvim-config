@@ -278,16 +278,6 @@ return require("packer").startup(function(use)
       require "myconfig.config.dap"
     end,
     requires = {
-      -- {{{ Javascript debugging
-      {
-        "mxsdev/nvim-dap-vscode-js",
-        requires = {
-          "microsoft/vscode-js-debug",
-          opt = true,
-          run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv -f dist out",
-        },
-      },
-      -- }}}
       -- {{{ Java debugging
       {
         "microsoft/java-debug",
