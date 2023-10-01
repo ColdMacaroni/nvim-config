@@ -3,6 +3,12 @@
 - Lsp lines my beloved
   https://git.sr.ht/~whynothugo/lsp_lines.nvim
 
+- Browse code reference both way (very nice??)
+  https://github.com/ray-x/navigator.lua
+
+- Prettier quick fix list
+  https://github.com/yorickpeterse/nvim-pqf
+
 - Edit filesystem in a buffer
   https://github.com/stevearc/oil.nvim
 
