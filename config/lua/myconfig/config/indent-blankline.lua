@@ -1,8 +1,8 @@
-require("indent_blankline").setup {
-  show_current_context = true,
-  show_first_indent_level = false,
-  use_treesitter = true,
-}
+local ibl = require "ibl"
+ibl.setup()
+
+local hooks = require "ibl.hooks"
+hooks.register(hooks.type.WHITESPACE, hooks.builtin.hide_first_space_indent_level)
 
 -- {{{ AutoCMD: Make background lines darker
 -- It will look kinda ugly in light themes but like that's your problem  ( ◕ ◡ ◕ ✿ )
