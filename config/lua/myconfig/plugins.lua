@@ -170,7 +170,6 @@ return require("packer").startup(function(use)
     end,
   }
 
-  use "mbbill/undotree"
 
   use {
     "lukas-reineke/indent-blankline.nvim",
@@ -415,6 +414,7 @@ return require("packer").startup(function(use)
     ft = "processing",
   }
 
+  use "mbbill/undotree"
   use "elixir-editors/vim-elixir"
   use "preservim/vim-markdown"
   use "AndrewRadev/bufferize.vim"
