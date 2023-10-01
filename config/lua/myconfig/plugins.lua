@@ -405,13 +405,21 @@ return require("packer").startup(function(use)
       require("colortils").setup {}
     end,
   }
+  use {
+    "sophacles/vim-processing",
+    config = function()
+      -- The processing extension adds this highlight but it conflicts with my todo extension and makes stuff unreadable
+      vim.cmd [[hi Todo guibg=None guifg=None]]
+    end,
+    opt = true,
+    ft = "processing",
+  }
 
   use "elixir-editors/vim-elixir"
   use "preservim/vim-markdown"
   use "AndrewRadev/bufferize.vim"
   use "chrisbra/csv.vim"
   use "dpezto/gnuplot.vim"
-  use "sophacles/vim-processing"
   use "eandrju/cellular-automaton.nvim"
   use "nvim-tree/nvim-web-devicons"
   use "tpope/vim-fugitive"
