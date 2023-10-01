@@ -326,13 +326,6 @@ return require("packer").startup(function(use)
   }
 
   use {
-    "ellisonleao/glow.nvim",
-    config = function()
-      require("glow").setup()
-    end,
-  }
-
-  use {
     "andymass/vim-matchup",
     requires = { "nvim-treesitter/nvim-treesitter" },
     config = function()
