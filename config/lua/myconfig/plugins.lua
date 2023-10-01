@@ -397,6 +397,7 @@ return require("packer").startup(function(use)
       require("colortils").setup {}
     end,
   }
+
   use {
     "sophacles/vim-processing",
     config = function()
@@ -407,6 +408,7 @@ return require("packer").startup(function(use)
     ft = "processing",
   }
 
+  use "lvimuser/lsp-inlayhints.nvim"
   use "mbbill/undotree"
   use "elixir-editors/vim-elixir"
   use "preservim/vim-markdown"
