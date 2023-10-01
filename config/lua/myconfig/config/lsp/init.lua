@@ -1,3 +1,5 @@
+require "myconfig.config.lsp.autocmds"
+
 local lspconfig = require "lspconfig"
 local util = require "myconfig.config.lsp.util"
 
