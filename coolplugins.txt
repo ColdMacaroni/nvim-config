@@ -9,9 +9,6 @@
 - .gitignore templates
   https://github.com/wintermute-cell/gitignore.nvim
 
-- org-mode-like files and management of them. Looks cool and likely nicer than markdown
-  https://github.com/nvim-neorg/neorg
-
 - Visually see marks and more management options
   https://github.com/chentoast/marks.nvim
 
