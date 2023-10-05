@@ -10,9 +10,11 @@ vim.lsp.start {
   root_dir = root_dir,
 }
 
+vim.api.nvim_create_augroup("ProcessingTags", {})
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  group = "ProcessingTags",
   pattern = { "*.pde" },
   callback = function()
-    vim.cmd [[silent! !ctags --langmap=java:+.pde -R]]
+    vim.cmd [[silent! !ctags --langmap=java:+.pde -R&]]
   end,
 })
