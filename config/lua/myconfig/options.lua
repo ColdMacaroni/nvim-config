@@ -16,6 +16,9 @@ vim.o.scrolloff = 6
 vim.o.list = true
 vim.opt.listchars:append { trail = "•" }
 
+-- Indent blankline glitches a bit, so this helps not making it so visible.
+vim.opt.listchars:append { tab = "▎ " }
+
 -- Persistent undo
 vim.o.undofile = true
 
