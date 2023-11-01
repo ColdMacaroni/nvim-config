@@ -55,7 +55,6 @@ local languages = {
     getfmt "shfmt",
   },
   python = {
-    getlint "flake8",
     getfmt "autopep8",
   },
   elixir = {
