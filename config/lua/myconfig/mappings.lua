@@ -175,6 +175,15 @@ wk.register({
 }, {})
 -- }}}
 
+-- {{{ Quick splits
+wk.register({
+  s = { vim.cmd.vsplit, "Vertical split" },
+}, { mode = { "n" }, prefix = "<leader>v" })
+wk.register({
+  p = { vim.cmd.split, "Horizontal split" },
+}, { mode = { "n" }, prefix = "<leader>s" })
+-- }}}
+
 -- {{{ Text moving
 wk.register({
   ["<M-Down>"] = { ":move '>+1<cr>gv=gv", "Move lines down" },
