@@ -10,7 +10,8 @@ vim.keymap.set("n", "<Esc>", vim.cmd.nohlsearch, { silent = true })
 -- TODO: Change the prefix = <leader> to the corresponding one. E.g. <leader>g
 -- {{{ Nice terminal splitting: start_term(vsplit | split)
 local function start_term(split_cmd)
-  vim.cmd("botright " .. split_cmd .. " term://" .. vim.env.SHELL)
+  local prevbelow = vim.o.splitbelow
+  vim.cmd(split_cmd .. " term://" .. vim.env.SHELL)
   -- Kill as soon as it's out of sight
   vim.bo.bufhidden = "wipe"
 
