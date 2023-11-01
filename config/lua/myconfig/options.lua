@@ -5,8 +5,9 @@ vim.g.loaded_netrwPlugin = 1
 -- ...
 vim.o.termguicolors = true
 
--- Vertical splits go to the right
+-- I just love botright
 vim.o.splitright = true
+vim.o.splitbelow = true
 
 -- Cool sets and options
 vim.o.number = true
@@ -23,9 +24,9 @@ vim.opt.listchars:append { tab = "▎ " }
 vim.o.undofile = true
 
 -- Tab key stuff
-vim.o.shiftwidth = 2
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
 vim.o.expandtab = true
 
 -- Use {{{}}} :D
