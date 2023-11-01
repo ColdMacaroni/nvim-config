@@ -162,12 +162,16 @@ wk.register({
 }, { prefix = "<leader>d" })
 -- }}}
 
--- {{{ Easy window movement with ctrl arrow
+-- {{{ Easy window movement with ctrl
 wk.register({
   ["<C-Up>"] = { "<C-w>k", "Go to the up window" },
   ["<C-Down>"] = { "<C-w>j", "Go to the down window" },
   ["<C-Left>"] = { "<C-w>h", "Go to the left window" },
   ["<C-Right>"] = { "<C-w>l", "Go to the right window" },
+  ["<C-k>"] = { "<C-w>k", "Go to the up window" },
+  ["<C-j>"] = { "<C-w>j", "Go to the down window" },
+  ["<C-h>"] = { "<C-w>h", "Go to the left window" },
+  ["<C-l>"] = { "<C-w>l", "Go to the right window" },
 }, {})
 -- }}}
 
