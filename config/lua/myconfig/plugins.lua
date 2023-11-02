@@ -173,12 +173,12 @@ return require("packer").startup(function(use)
   }
 
 
-  use {
+  --[[ use {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
       require "myconfig.config.indent-blankline"
     end,
-  }
+  } ]]
 
   use {
     "creativenull/efmls-configs-nvim",
