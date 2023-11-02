@@ -124,6 +124,8 @@ return require("packer").startup(function(use)
         requires = {
           "L3MON4D3/LuaSnip",
           requires = { "rafamadriz/friendly-snippets" },
+          opt = true,
+          module = "luasnip",
           config = function()
             require "myconfig.config.luasnip"
           end,
@@ -380,6 +382,7 @@ return require("packer").startup(function(use)
       require("orgmode").setup {}
     end,
     requires = { "nvim-treesitter/nvim-treesitter" },
+
   }
 
   use {
