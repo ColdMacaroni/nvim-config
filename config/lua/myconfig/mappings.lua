@@ -181,6 +181,7 @@ wk.register({
 -- {{{ Loose mappings
 wk.register({
   x = { "<cmd>Bdelete<cr>", "Delete buffer" },
+  e = "Load NvimTree"
 }, { prefix = "<leader>" })
 
 wk.register({
