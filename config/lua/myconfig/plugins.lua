@@ -57,6 +57,18 @@ return require("packer").startup(function(use)
     end,
   }
   -- }}}
+
+  -- {{{ Everblush
+  use {
+    "Everblush/nvim",
+    as = "everblush",
+    config = function()
+      require("everblush").setup {
+        transparent_background = vim.g.transparent_enabled or false,
+      }
+    end,
+  }
+  -- }}}
   -- }}}
 
   -- {{{ Telescope
