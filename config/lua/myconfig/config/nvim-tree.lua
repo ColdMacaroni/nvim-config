@@ -32,3 +32,20 @@ require("nvim-tree").setup {
   --   update_root = true,
   -- },
 }
+
+local wk = require 'which-key'
+
+wk.register({
+  e = {
+    function()
+      -- Toggle or focus depending on if we're on it
+      local tree = require("nvim-tree.api").tree
+      if tree.is_tree_buf() then
+        tree.close_in_this_tab()
+      else
+        tree.focus()
+      end
+    end,
+    "Toggle Nvim tree",
+  },
+}, { prefix = "<leader>" })

@@ -130,6 +130,8 @@ return require("packer").startup(function(use)
         },
       },
     },
+    event = "InsertEnter",
+    module = "cmp",
     config = function()
       require "myconfig.config.cmp"
     end,
@@ -218,11 +220,13 @@ return require("packer").startup(function(use)
   -- Delete buffers without messing things up
   use "famiu/bufdelete.nvim"
 
+  -- TODO: Replace with oil or smth?
   use {
     "nvim-tree/nvim-tree.lua",
     config = function()
       require "myconfig.config.nvim-tree"
     end,
+    keys = "<leader>e"
   }
 
   -- Yes!!
