@@ -67,6 +67,8 @@ return require("packer").startup(function(use)
       require "myconfig.config.telescope"
     end,
     requires = { "nvim-lua/plenary.nvim" },
+    keys = "<leader>f",
+    cmd = "Telescope",
   }
 
   -- Emojis, kaomoji, unicode and latex math
